@@ -9,6 +9,8 @@ class App extends Component {
   state = {
     username: 'Colin'
   }; 
+
+  
   
     handleupdate = (event) => {
         this.setState({
@@ -17,12 +19,22 @@ class App extends Component {
     }
 
   render() {
+
+    const style ={
+      background: 'white',
+      font:'inherit',
+      border:'1px solid blue',
+      padding:'8px',
+      cursor:'pointer'
+
+    };
+
     return (
 
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-
+        
           <Input changed={this.handleupdate} currentuser={this.state} />
           <Output username={this.state.username} />
           <a
